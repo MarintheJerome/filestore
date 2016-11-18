@@ -103,6 +103,7 @@ public class FileItemsResource {
 	}
 	
 	@GET
+	@Produces({MediaType.APPLICATION_OCTET_STREAM})
 	@Path("/{key}")
 	public FileItem getFile(@PathParam("key") String key) throws FileServiceException {
 		LOGGER.log(Level.INFO, "GET /files/" + key);
